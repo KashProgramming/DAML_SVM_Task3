@@ -27,7 +27,7 @@ user_input = np.array([[fixed_acidity, volatile_acidity, citric_acid, residual_s
                         free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates,
                         alcohol, quality]])
 
-if st.button("Predict price"):
+if st.button("Predict Quality"):
     # scaling user inputs and applying PCA
     scaled_input = scaler.transform(user_input)
     prediction = loaded_model.predict(scaled_input)
