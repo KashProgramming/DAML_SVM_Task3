@@ -22,10 +22,9 @@ density = st.number_input("Density")
 pH = st.number_input("pH")
 sulphates = st.number_input("Sulphates")
 alcohol = st.number_input("Alcohol")
-quality = st.number_input("Quality", min_value=0, max_value=10)
 user_input = np.array([[fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides,
                         free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates,
-                        alcohol, quality]])
+                        alcohol]])
 
 if st.button("Predict Quality"):
     # scaling user inputs and applying PCA
