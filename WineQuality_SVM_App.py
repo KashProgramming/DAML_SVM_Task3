@@ -30,7 +30,4 @@ if st.button("Predict Quality"):
     # scaling user inputs and applying PCA
     scaled_input = scaler.transform(user_input)
     prediction = loaded_model.predict(scaled_input)
-    if prediction == 1:
-        st.success("It will rain tomorrow.")
-    elif prediction == 0:
-        st.success("It will not rain tomorrow.")
+    st.success(f"Wine Quality is: {prediction}.")
