@@ -30,4 +30,4 @@ if st.button("Predict Quality"):
     # scaling user inputs and applying PCA
     scaled_input = scaler.transform(user_input)
     prediction = loaded_model.predict(scaled_input)
-    st.success(f"Wine Quality is: {prediction}.")
+    st.success(f"Wine Quality is: {prediction[0]}.")
